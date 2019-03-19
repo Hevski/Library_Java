@@ -23,9 +23,23 @@ public class Borrower {
         this.borrowedBook(book);
     }
 
-    public void returnsBook(Library library) {
+    public void returnsBook(Library library ) {
         LibraryBook returnedBook = this.borrowed.remove(0);
         library.addBook(returnedBook);
 
     }
+
+    public LibraryBook findSpecificBook(LibraryBook bookToFind) {
+//        LibraryBook bookToReturn = bookToFind
+        for (LibraryBook book : this.borrowed) {
+            if (book == bookToFind) {
+                this.borrowed.remove(book);
+            }
+        }
+    }
 }
+
+//        for (int i = 0; i < countCoins(); i++){
+//            total += this.coins.get(i);
+//        }
+

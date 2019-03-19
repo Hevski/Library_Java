@@ -48,4 +48,22 @@ public class TestBorrower {
         assertEquals(0, borrower.countBorrowedBooks());
         assertEquals(1, library.countBooks());
     }
+
+    //test not passing as its
+
+    @Test
+    public void canFindSpecificBookAndReturnIt(){
+        library.addBook(book1);
+        library.addBook(book2);
+        assertEquals(book1, borrower.findSpecificBook(book1));
+    }
+
+//    @Test
+//    public void checBorrowerHasCertainBook(){
+//        library.addBook(book1);
+//        library.addBook(book2);
+//        borrower.borrowsBookFromLibrary(library);
+//        borrower.borrowsBookFromLibrary(library);
+//        assertEquals([book1, book2], borrower.booksBorrowed());
+//    }
 }
