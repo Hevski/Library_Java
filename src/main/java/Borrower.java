@@ -29,17 +29,20 @@ public class Borrower {
 
     }
 
-    public LibraryBook findSpecificBook(LibraryBook bookToFind) {
-//        LibraryBook bookToReturn = bookToFind
-        for (LibraryBook book : this.borrowed) {
-            if (book == bookToFind) {
-                this.borrowed.remove(book);
-            }
-        }
+    public LibraryBook findsBookByTitle(LibraryBook bookTitle) {
+        this.borrowed.contains(bookTitle);
+//      return
     }
-}
 
-//        for (int i = 0; i < countCoins(); i++){
-//            total += this.coins.get(i);
+    //    public LibraryBook findSpecificBook(LibraryBook bookToFind) {
+////        LibraryBook bookToReturn =
+//        for (LibraryBook book : this.borrowed) {
+//            if (book == bookToFind) {
+//                this.borrowed.remove(book);
+//            }
+//
 //        }
+////        return bookToReturn;
+//    }
+}
 
